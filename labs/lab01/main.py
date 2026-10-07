@@ -12,5 +12,5 @@ lastName = "Graveley"
 print(firstName, lastName)
 
 # Ask th euser a question
-yourName = input("What is your first name? ")
-print("Hello there,",yourName,"!")
+yourName = input("What is your first name?: ")
+print(f"Hello there,{yourName}!")
