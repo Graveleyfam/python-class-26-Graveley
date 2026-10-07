@@ -11,18 +11,14 @@ print("*" * 20) # prints a line of 20 of the symbol
 
 print() # Space
 Username = input("what's your name?: ") # User inputs their name
-print(f"Hello,{Username}!") # use of F String and display user name
+print(f"Hello, {Username}!") # use of F String and display user name
 
 # Ask if the user would like to take a quiz. Depending on their answer - move to the questions or give a farewell greeting (maybe next time?).  
 
 print() # Space
 start_Quiz = input("Do you want to take my quiz? Y/N: ") # Asks user input
-if start_Quiz.upper == "Y": # If Statement & This will make any lowercase input into an uppercase
+if start_Quiz.upper() == "Y": # If Statement & This will make any lowercase input into an uppercase
     print("Great, let's get started!") # Display for YES
-elif start_Quiz == "N": # Elif statement 
-    print("Sorry, Maybe next time...") # Display for NO
-else: 
-    print("Sorry. That is an invalid response. try again")
 
 # Initialize a variable that will be used as a counter that will store the total amount of correct answers. Set it to 0 at the beginning of the program.
 
@@ -31,34 +27,53 @@ else:
 # Print out each quiz question with a question number. Example: 1) What is 5 + 5 ? 
 
     # Question 1 example for math
-    Q1 = int(input("How would Python solve 5 * 5?: "))
-    if Q1 == 25:
+    print()
+    q1 = int(input("How would Python solve 5 * 5?: "))
+    if q1 == 25:
+        print()
         print("You are correct, Good Job!")
         counter += 1
     else:
+        print()
         print("Sorry. that was incorrect")
 
     # Question 2 Example for multiple choice
-    print("What is thr function that we use to output something to the terminal")
+    print()
+    print("What is the function that we use to output something to the terminal?")
+    print()
     print(" A - Output()")
     print(" B - print()")
     print(" C - format()")
     print(" D - None of the above")
-    
+    print()
+    q2 = input("Your answer - Choose A/B/C/D: ")
+    if q2.upper() == "B":
+        counter += 1
+        print()
+        print("Yes! you are correct")
+    else:
+        print()
+        print("That's wrong Sir/Ma'am")
+
+
 
 
     # Output for result
-
+    print()
     print("* * * YOUR FINAL SCORE * * * ")
-    print(f"Your final score is: {counter}")
+    print()
+    print(f"   Your final score is: {counter}")
 
     #Give them feedback on their overall score
+    print()
     if counter == 5:
         print("You are a rockstar! you got them all right!")
     elif counter >= 3 and counter < 5:
         print("Great work!")
     elif counter >= 1 and counter < 3:
         print("Not the best score...")
+    else:
+        print("Sorry. you can't do this.")
     
 
 # Create a variable to store the answer. Be very specific about what the user should type depending on the way you have setup your questions.
@@ -74,3 +89,11 @@ else:
 # 0 or 1/5 = Maybe this isn't your area of interest? 
 # Be sure to provide a farewell message. 
 # Comment your code, test your code well, and have fun!
+
+
+
+elif start_Quiz.upper() == "N": # Elif statement 
+    print("Sorry, Maybe next time...") # Display for NO
+else: 
+    print("Sorry. That is an invalid response. try again")
+
