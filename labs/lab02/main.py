@@ -55,6 +55,9 @@ if start_Quiz.upper() == "Y": # If Statement & This will make any lowercase inpu
         print()
         print("That's wrong Sir/Ma'am")
 
+    # Question 3 
+
+    # q3 = 
 
 
 
